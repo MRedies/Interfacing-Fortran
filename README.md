@@ -1,5 +1,5 @@
 # Interfacing-Fortran
-A complete tutorial on interfacing Fortran with C
+A complete tutorial on interfacing Fortran with C. Improvement and requests for further examples are welcome.
 
 ## Calling C from Fortran
 ### Reading C-Strings
