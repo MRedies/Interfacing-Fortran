@@ -2,7 +2,7 @@
 A complete tutorial on interfacing Fortran with C
 
 ## Reading C-Strings
-In C strings are represented as ```char *``` arrays, terminated by the ```\NUL``` charakter. Unlike fortran these string do not have a fixed size. To convert them to Fortran style characters one can use C's strlen function:
+In C strings are represented as ```char *``` arrays, terminated by the ```\NUL``` charakter. Unlike fortran these string do not have a fixed size. To convert them to Fortran style characters one can use C's ```strlen``` function:
 
 ```Fortran
 function get_string(c_pointer) result(f_string)
@@ -28,4 +28,4 @@ function get_string(c_pointer) result(f_string)
 end function get_string
 ```
 
-A full working example can be found in example/char_arrays/.
+The use of ```strlen``` avoids casting a ```char *```-array as a ```character(len=1), dimension(:)```-array, which can cause problems with some compilers. A full working example can be found in example/char_arrays/.
