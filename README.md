@@ -69,7 +69,7 @@ end interface
 and with this we can get the C-pointer and associate it with a pointer to our local type:
 
 ```Fortran
-type(compact), pointer           :: f_pointe
+type(compact), pointer           :: f_pointer
 ...
 ! call C to get struct * pointer
 c_pointer = get_struct()
